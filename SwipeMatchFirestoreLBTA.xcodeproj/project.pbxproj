@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D658FFC825071B9100128FA2 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658FFC725071B9100128FA2 /* CardView.swift */; };
 		D6FAEC3225047C2A0060D5A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FAEC3125047C2A0060D5A0 /* AppDelegate.swift */; };
 		D6FAEC3425047C2A0060D5A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FAEC3325047C2A0060D5A0 /* SceneDelegate.swift */; };
 		D6FAEC3825047C2B0060D5A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6FAEC3725047C2B0060D5A0 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D658FFC725071B9100128FA2 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		D6FAEC2E25047C2A0060D5A0 /* SwipeMatchFirestoreLBTA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwipeMatchFirestoreLBTA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6FAEC3125047C2A0060D5A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6FAEC3325047C2A0060D5A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			children = (
 				D6FAEC4C2505DD8F0060D5A0 /* HomeBottomControlsStackView.swift */,
 				D6FAEC4E2505E1AE0060D5A0 /* TopNavigationStackView.swift */,
+				D658FFC725071B9100128FA2 /* CardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D658FFC825071B9100128FA2 /* CardView.swift in Sources */,
 				D6FAEC4625047CC60060D5A0 /* ViewController.swift in Sources */,
 				D6FAEC3225047C2A0060D5A0 /* AppDelegate.swift in Sources */,
 				D6FAEC4D2505DD8F0060D5A0 /* HomeBottomControlsStackView.swift in Sources */,
