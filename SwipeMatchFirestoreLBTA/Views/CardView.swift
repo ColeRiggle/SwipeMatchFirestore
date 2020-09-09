@@ -10,7 +10,8 @@ import UIKit
 
 class CardView: UIView {
 
-    fileprivate let imageView = UIImageView(image: #imageLiteral(resourceName: "cole"))
+    let imageView = UIImageView(image: #imageLiteral(resourceName: "cole"))
+    let informationLabel = UILabel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -21,9 +22,14 @@ class CardView: UIView {
         
         addSubview(imageView)
         imageView.fillSuperview()
-        
         imageView.contentMode = .scaleAspectFill
         
+        addSubview(informationLabel)
+        informationLabel.anchor(top: nil, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 16, bottom: 16, right: 16))
+        informationLabel.text = "TEST NAME TEST NAME AGE"
+        informationLabel.textColor = .white
+        informationLabel.font = .systemFont(ofSize: 34, weight: .heavy)
+        informationLabel.numberOfLines = 2
         
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(handlePan))
         addGestureRecognizer(panGesture)
@@ -59,13 +65,13 @@ class CardView: UIView {
         let shouldDismissCard = abs(gesture.translation(in: nil).x) > threshold
         let translationDirection: CGFloat = gesture.translation(in: nil).x > 0 ? 1 : -1
         
-        UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.1, options: .curveEaseOut, animations: {
+        UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.1, options: .curveEaseOut, animations: {
             if shouldDismissCard {
-                self.center = CGPoint(x: 1000 * translationDirection, y: 0)
+                self.center = CGPoint(x: 600 * translationDirection, y: 0)
             }
             self.transform = .identity
         }) { (_) in
-            self.frame = CGRect(x: 0, y: 0, width: self.superview!.frame.width, height: self.superview!.frame.height)
+            //self.frame = CGRect(x: 0, y: 0, width: self.superview!.frame.width, height: self.superview!.frame.height)
         }
     }
     
