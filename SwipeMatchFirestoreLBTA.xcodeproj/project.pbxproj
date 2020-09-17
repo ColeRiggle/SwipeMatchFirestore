@@ -11,6 +11,8 @@
 		D658FFCB2508619300128FA2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658FFCA2508619300128FA2 /* User.swift */; };
 		D658FFCF250868ED00128FA2 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658FFCE250868ED00128FA2 /* CardViewModel.swift */; };
 		D658FFD1250954AF00128FA2 /* Advertiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658FFD0250954AF00128FA2 /* Advertiser.swift */; };
+		D65AC4502513ECDE00E4F758 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65AC44F2513ECDE00E4F758 /* CustomTextField.swift */; };
+		D6D4895B2513D9B6002C3D0E /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D4895A2513D9B6002C3D0E /* RegistrationController.swift */; };
 		D6FAEC3225047C2A0060D5A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FAEC3125047C2A0060D5A0 /* AppDelegate.swift */; };
 		D6FAEC3425047C2A0060D5A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FAEC3325047C2A0060D5A0 /* SceneDelegate.swift */; };
 		D6FAEC3825047C2B0060D5A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6FAEC3725047C2B0060D5A0 /* Assets.xcassets */; };
@@ -26,6 +28,9 @@
 		D658FFCA2508619300128FA2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D658FFCE250868ED00128FA2 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 		D658FFD0250954AF00128FA2 /* Advertiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advertiser.swift; sourceTree = "<group>"; };
+		D65AC44F2513ECDE00E4F758 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		D65AC4512513F2AB00E4F758 /* SwipeMatchFirestoreLBTA.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwipeMatchFirestoreLBTA.entitlements; sourceTree = "<group>"; };
+		D6D4895A2513D9B6002C3D0E /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		D6FAEC2E25047C2A0060D5A0 /* SwipeMatchFirestoreLBTA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwipeMatchFirestoreLBTA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6FAEC3125047C2A0060D5A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6FAEC3325047C2A0060D5A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				D6FAEC4525047CC60060D5A0 /* HomeController.swift */,
+				D6D4895A2513D9B6002C3D0E /* RegistrationController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -93,6 +99,7 @@
 		D6FAEC3025047C2A0060D5A0 /* SwipeMatchFirestoreLBTA */ = {
 			isa = PBXGroup;
 			children = (
+				D65AC4512513F2AB00E4F758 /* SwipeMatchFirestoreLBTA.entitlements */,
 				D658FFCD250868E200128FA2 /* ViewModels */,
 				D658FFCC2508685100128FA2 /* Controllers */,
 				D658FFC92508618800128FA2 /* Model */,
@@ -129,6 +136,7 @@
 				D6FAEC4C2505DD8F0060D5A0 /* HomeBottomControlsStackView.swift */,
 				D6FAEC4E2505E1AE0060D5A0 /* TopNavigationStackView.swift */,
 				D658FFC725071B9100128FA2 /* CardView.swift */,
+				D65AC44F2513ECDE00E4F758 /* CustomTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -159,6 +167,9 @@
 		D6FAEC2625047C2A0060D5A0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					New,
+				);
 				LastSwiftUpdateCheck = 1170;
 				LastUpgradeCheck = 1170;
 				ORGANIZATIONNAME = "Cole Riggle";
@@ -209,7 +220,9 @@
 				D6FAEC4625047CC60060D5A0 /* HomeController.swift in Sources */,
 				D6FAEC3225047C2A0060D5A0 /* AppDelegate.swift in Sources */,
 				D6FAEC4D2505DD8F0060D5A0 /* HomeBottomControlsStackView.swift in Sources */,
+				D6D4895B2513D9B6002C3D0E /* RegistrationController.swift in Sources */,
 				D658FFCB2508619300128FA2 /* User.swift in Sources */,
+				D65AC4502513ECDE00E4F758 /* CustomTextField.swift in Sources */,
 				D6FAEC4F2505E1AE0060D5A0 /* TopNavigationStackView.swift in Sources */,
 				D6FAEC4925047E460060D5A0 /* Extensions+UIView.swift in Sources */,
 				D6FAEC3425047C2A0060D5A0 /* SceneDelegate.swift in Sources */,
@@ -348,8 +361,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SwipeMatchFirestoreLBTA/SwipeMatchFirestoreLBTA.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SwipeMatchFirestoreLBTA/Preview Content\"";
+				DEVELOPMENT_TEAM = 4SPAE5RMML;
 				ENABLE_PREVIEWS = NO;
 				INFOPLIST_FILE = SwipeMatchFirestoreLBTA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -367,8 +382,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SwipeMatchFirestoreLBTA/SwipeMatchFirestoreLBTA.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SwipeMatchFirestoreLBTA/Preview Content\"";
+				DEVELOPMENT_TEAM = 4SPAE5RMML;
 				ENABLE_PREVIEWS = NO;
 				INFOPLIST_FILE = SwipeMatchFirestoreLBTA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

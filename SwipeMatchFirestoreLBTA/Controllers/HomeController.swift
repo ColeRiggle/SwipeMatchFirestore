@@ -29,6 +29,8 @@ class HomeController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         
+        topStackView.settingsButton.addTarget(self, action: #selector(handleSettings), for: .touchUpInside)
+        
         setupLayout()
         setupDummyCards()
     }
@@ -56,5 +58,11 @@ class HomeController: UIViewController {
         overallStackView.layoutMargins = .init(top: 0, left: 12, bottom: 0, right: 12)
         
         overallStackView.bringSubviewToFront(cardsDeckView)
+    }
+    
+    @objc fileprivate func handleSettings() {
+        let registrationController = RegistrationController()
+        registrationController.modalPresentationStyle = .fullScreen
+        present(registrationController, animated: true)
     }
 }
