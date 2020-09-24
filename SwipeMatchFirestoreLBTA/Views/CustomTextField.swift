@@ -19,6 +19,8 @@ class CustomTextField: UITextField {
         backgroundColor = .white
     }
     
+    // textRect and editingRect are responsible for the inset editing field for the
+    // registration buttons
     override func textRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.insetBy(dx: padding, dy: 0)
     }
@@ -27,6 +29,7 @@ class CustomTextField: UITextField {
         return bounds.insetBy(dx: padding, dy: 0)
     }
     
+    // used to set a tenative size for all the TextFields in the application to prevent duplication
     override var intrinsicContentSize: CGSize {
         return .init(width: 0, height: 50)
     }

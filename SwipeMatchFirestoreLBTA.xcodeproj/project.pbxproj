@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35DF064258120E8286B983D8 /* Pods_SwipeMatchFirestoreLBTA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE14D167795933E7DD15ADDD /* Pods_SwipeMatchFirestoreLBTA.framework */; };
 		D658FFC825071B9100128FA2 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658FFC725071B9100128FA2 /* CardView.swift */; };
 		D658FFCB2508619300128FA2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658FFCA2508619300128FA2 /* User.swift */; };
 		D658FFCF250868ED00128FA2 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658FFCE250868ED00128FA2 /* CardViewModel.swift */; };
 		D658FFD1250954AF00128FA2 /* Advertiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658FFD0250954AF00128FA2 /* Advertiser.swift */; };
 		D65AC4502513ECDE00E4F758 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65AC44F2513ECDE00E4F758 /* CustomTextField.swift */; };
+		D68D0D15251C30ED009E2374 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68D0D14251C30ED009E2374 /* RegistrationViewModel.swift */; };
 		D6D4895B2513D9B6002C3D0E /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D4895A2513D9B6002C3D0E /* RegistrationController.swift */; };
 		D6FAEC3225047C2A0060D5A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FAEC3125047C2A0060D5A0 /* AppDelegate.swift */; };
 		D6FAEC3425047C2A0060D5A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FAEC3325047C2A0060D5A0 /* SceneDelegate.swift */; };
@@ -24,12 +26,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		35C3E373C5D000C24A70247C /* Pods-SwipeMatchFirestoreLBTA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeMatchFirestoreLBTA.release.xcconfig"; path = "Target Support Files/Pods-SwipeMatchFirestoreLBTA/Pods-SwipeMatchFirestoreLBTA.release.xcconfig"; sourceTree = "<group>"; };
+		6F3442769469697BFC25A8A1 /* Pods-SwipeMatchFirestoreLBTA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeMatchFirestoreLBTA.debug.xcconfig"; path = "Target Support Files/Pods-SwipeMatchFirestoreLBTA/Pods-SwipeMatchFirestoreLBTA.debug.xcconfig"; sourceTree = "<group>"; };
+		BE14D167795933E7DD15ADDD /* Pods_SwipeMatchFirestoreLBTA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwipeMatchFirestoreLBTA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D658FFC725071B9100128FA2 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		D658FFCA2508619300128FA2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D658FFCE250868ED00128FA2 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 		D658FFD0250954AF00128FA2 /* Advertiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advertiser.swift; sourceTree = "<group>"; };
 		D65AC44F2513ECDE00E4F758 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		D65AC4512513F2AB00E4F758 /* SwipeMatchFirestoreLBTA.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwipeMatchFirestoreLBTA.entitlements; sourceTree = "<group>"; };
+		D68D0D14251C30ED009E2374 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		D6D4895A2513D9B6002C3D0E /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		D6FAEC2E25047C2A0060D5A0 /* SwipeMatchFirestoreLBTA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwipeMatchFirestoreLBTA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6FAEC3125047C2A0060D5A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,12 +54,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35DF064258120E8286B983D8 /* Pods_SwipeMatchFirestoreLBTA.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		109B577B8200F8426E970FA2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE14D167795933E7DD15ADDD /* Pods_SwipeMatchFirestoreLBTA.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D658FFC92508618800128FA2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +83,7 @@
 			children = (
 				D6FAEC4525047CC60060D5A0 /* HomeController.swift */,
 				D6D4895A2513D9B6002C3D0E /* RegistrationController.swift */,
+				D68D0D14251C30ED009E2374 /* RegistrationViewModel.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -85,6 +101,8 @@
 			children = (
 				D6FAEC3025047C2A0060D5A0 /* SwipeMatchFirestoreLBTA */,
 				D6FAEC2F25047C2A0060D5A0 /* Products */,
+				DF8A51B82A54796B04FDEF01 /* Pods */,
+				109B577B8200F8426E970FA2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -141,6 +159,16 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		DF8A51B82A54796B04FDEF01 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6F3442769469697BFC25A8A1 /* Pods-SwipeMatchFirestoreLBTA.debug.xcconfig */,
+				35C3E373C5D000C24A70247C /* Pods-SwipeMatchFirestoreLBTA.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -148,9 +176,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D6FAEC4225047C2B0060D5A0 /* Build configuration list for PBXNativeTarget "SwipeMatchFirestoreLBTA" */;
 			buildPhases = (
+				EC02E243A95F1F72AC377C17 /* [CP] Check Pods Manifest.lock */,
 				D6FAEC2A25047C2A0060D5A0 /* Sources */,
 				D6FAEC2B25047C2A0060D5A0 /* Frameworks */,
 				D6FAEC2C25047C2A0060D5A0 /* Resources */,
+				C7A55E3B2BBE4C181FB4DFAC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -209,6 +239,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C7A55E3B2BBE4C181FB4DFAC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwipeMatchFirestoreLBTA/Pods-SwipeMatchFirestoreLBTA-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwipeMatchFirestoreLBTA/Pods-SwipeMatchFirestoreLBTA-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwipeMatchFirestoreLBTA/Pods-SwipeMatchFirestoreLBTA-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC02E243A95F1F72AC377C17 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwipeMatchFirestoreLBTA-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D6FAEC2A25047C2A0060D5A0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -223,6 +295,7 @@
 				D6D4895B2513D9B6002C3D0E /* RegistrationController.swift in Sources */,
 				D658FFCB2508619300128FA2 /* User.swift in Sources */,
 				D65AC4502513ECDE00E4F758 /* CustomTextField.swift in Sources */,
+				D68D0D15251C30ED009E2374 /* RegistrationViewModel.swift in Sources */,
 				D6FAEC4F2505E1AE0060D5A0 /* TopNavigationStackView.swift in Sources */,
 				D6FAEC4925047E460060D5A0 /* Extensions+UIView.swift in Sources */,
 				D6FAEC3425047C2A0060D5A0 /* SceneDelegate.swift in Sources */,
@@ -359,6 +432,7 @@
 		};
 		D6FAEC4325047C2B0060D5A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F3442769469697BFC25A8A1 /* Pods-SwipeMatchFirestoreLBTA.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SwipeMatchFirestoreLBTA/SwipeMatchFirestoreLBTA.entitlements;
@@ -380,6 +454,7 @@
 		};
 		D6FAEC4425047C2B0060D5A0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35C3E373C5D000C24A70247C /* Pods-SwipeMatchFirestoreLBTA.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SwipeMatchFirestoreLBTA/SwipeMatchFirestoreLBTA.entitlements;

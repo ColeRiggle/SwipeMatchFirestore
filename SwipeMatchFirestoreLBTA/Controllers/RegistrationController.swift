@@ -26,7 +26,10 @@ class RegistrationController: UIViewController {
         let button = UIButton()
         button.setTitle("Register", for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 16, weight: .bold)
-        button.backgroundColor = #colorLiteral(red: 0.8108462691, green: 0.09795912355, blue: 0.3279393613, alpha: 1)
+        button.backgroundColor = .lightGray
+        button.setTitleColor(.darkGray, for: .disabled)
+        button.isEnabled = false
+        //button.backgroundColor = #colorLiteral(red: 0.8108462691, green: 0.09795912355, blue: 0.3279393613, alpha: 1)
         button.layer.cornerRadius = 22
         button.heightAnchor.constraint(equalToConstant: 44).isActive = true
         return button
@@ -35,6 +38,7 @@ class RegistrationController: UIViewController {
     let fullNameTextLabel: CustomTextField = {
         let tf = CustomTextField(padding: 24)
         tf.placeholder = "Enter full name"
+        tf.addTarget(self, action: #selector(handleTextChange), for: .editingChanged)
         tf.heightAnchor.constraint(equalToConstant: 50).isActive = true
         return tf
     }()
@@ -43,6 +47,7 @@ class RegistrationController: UIViewController {
         let tf = CustomTextField(padding: 24)
         tf.placeholder = "Enter email"
         tf.keyboardType = .emailAddress
+        tf.addTarget(self, action: #selector(handleTextChange), for: .editingChanged)
         tf.heightAnchor.constraint(equalToConstant: 50).isActive = true
         return tf
     }()
@@ -51,9 +56,20 @@ class RegistrationController: UIViewController {
         let tf = CustomTextField(padding: 24)
         tf.placeholder = "Enter password"
         tf.isSecureTextEntry = true
+        tf.addTarget(self, action: #selector(handleTextChange), for: .editingChanged)
         tf.heightAnchor.constraint(equalToConstant: 50).isActive = true
         return tf
     }()
+    
+    @objc fileprivate func handleTextChange(textField: UITextField) {
+        if (textField == fullNameTextLabel) {
+            registrationViewModel.fullName = textField.text
+        } else if (textField == emailTextField) {
+            registrationViewModel.email = textField.text
+        } else if (textField == passwordTextField) {
+            registrationViewModel.password = textField.text
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,10 +78,26 @@ class RegistrationController: UIViewController {
         setupLayout()
         setupNotificationObservers()
         setupTapGesture()
+        setupRegistrationViewModelObserver()
     }
 
     
     // MARK:- private
+    
+    let registrationViewModel = RegistrationViewModel()
+    
+    fileprivate func setupRegistrationViewModelObserver() {
+        registrationViewModel.isFormValidObserver = { isFormValid in
+            self.registerButton.isEnabled = isFormValid
+            if isFormValid {
+                self.registerButton.backgroundColor = .red
+                self.registerButton.setTitleColor(.white, for: .normal)
+            } else {
+                self.registerButton.backgroundColor = .lightGray
+                self.registerButton.setTitleColor(.gray, for: .normal)
+            }
+        }
+    }
     
     fileprivate func setupTapGesture() {
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTapDismiss)))
