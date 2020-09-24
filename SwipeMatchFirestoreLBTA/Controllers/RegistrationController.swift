@@ -10,6 +10,23 @@ import UIKit
 import Firebase
 import JGProgressHUD
 
+// Instead of directly extending these two protocols, extensions can be used
+extension RegistrationController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    // Neccessary to get the result from the ImagePicker
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let image = info[.originalImage] as? UIImage
+        registrationViewModel.bindableImage.value = image
+        dismiss(animated: true)
+    }
+    
+    // Not strictly neccessary
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true)
+    }
+}
+
+
 class RegistrationController: UIViewController {
 
     // UI Components
@@ -21,6 +38,10 @@ class RegistrationController: UIViewController {
         button.setTitleColor(.black, for: .normal)
         button.heightAnchor.constraint(equalToConstant: 275).isActive = true
         button.layer.cornerRadius = 16
+        button.addTarget(self, action: #selector(handleSelectPhoto), for: .touchUpInside)
+        button.imageView?.contentMode = .scaleAspectFill
+        // preserves corner radius even with imageView set to user photo
+        button.clipsToBounds = true
         return button;
     }()
     
@@ -63,6 +84,16 @@ class RegistrationController: UIViewController {
         return tf
     }()
     
+    @objc fileprivate func handleSelectPhoto() {
+        print("select photo")
+        let imagePickerController = UIImagePickerController()
+        
+        // First the VC must extent UIImagePickerControllerDelegate and UINavigationControllerDelegate
+        imagePickerController.delegate = self
+        view.endEditing(true)
+        present(imagePickerController, animated: true)
+    }
+    
     @objc fileprivate func handleTextChange(textField: UITextField) {
         if (textField == fullNameTextLabel) {
             registrationViewModel.fullName = textField.text
@@ -73,23 +104,20 @@ class RegistrationController: UIViewController {
         }
     }
     
+    let registeringHUD = JGProgressHUD(style: .dark)
+    
     @objc fileprivate func handleRegister() {
         self.handleTapDismiss()
-        guard let email = emailTextField.text else { return }
-        guard let password = emailTextField.text else { return }
         
-        Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
+        registrationViewModel.performRegistration { [unowned self] (error) in
             if let error = error {
-                print(error)
                 self.showHUDWithError(error)
-                return
             }
-            
-            print("Successfully registered user: ", result?.user.uid ?? "")
         }
     }
     
     fileprivate func showHUDWithError(_ error: Error) {
+        registeringHUD.dismiss()
         let hud = JGProgressHUD(style: .dark)
         hud.textLabel.text = "Failed registration"
         hud.detailTextLabel.text = error.localizedDescription
@@ -113,7 +141,8 @@ class RegistrationController: UIViewController {
     let registrationViewModel = RegistrationViewModel()
     
     fileprivate func setupRegistrationViewModelObserver() {
-        registrationViewModel.isFormValidObserver = { isFormValid in
+        registrationViewModel.bindableIsFormValid.bind(observer: { [unowned self] isFormValid in
+            guard let isFormValid = isFormValid else { return }
             self.registerButton.isEnabled = isFormValid
             if isFormValid {
                 self.registerButton.backgroundColor = .red
@@ -121,6 +150,20 @@ class RegistrationController: UIViewController {
             } else {
                 self.registerButton.backgroundColor = .lightGray
                 self.registerButton.setTitleColor(.gray, for: .normal)
+            }
+        })
+        
+        registrationViewModel.bindableImage.bind(observer: { [unowned self] image in
+            // cannot use selectPhotoButton.imageView?.image
+            self.selectPhotoButton.setImage(image?.withRenderingMode(.alwaysOriginal), for: .normal)
+        })
+        
+        registrationViewModel.bindableIsRegistering.bind { [unowned self] (isRegistering) in
+            if isRegistering == true {
+                self.registeringHUD.textLabel.text = "Register"
+                self.registeringHUD.show(in: view)
+            } else {
+                self.registeringHUD.dismiss(animated: true)
             }
         }
     }
