@@ -19,6 +19,7 @@
 		D6918C52251C552900BA2B1B /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6918C51251C552900BA2B1B /* Bindable.swift */; };
 		D6BAA3072532AD7A004BF887 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BAA3062532AD7A004BF887 /* SettingsCell.swift */; };
 		D6D4895B2513D9B6002C3D0E /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D4895A2513D9B6002C3D0E /* RegistrationController.swift */; };
+		D6F3CFF12538B921007D8645 /* AgeRangeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F3CFF02538B921007D8645 /* AgeRangeCell.swift */; };
 		D6FAEC3225047C2A0060D5A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FAEC3125047C2A0060D5A0 /* AppDelegate.swift */; };
 		D6FAEC3425047C2A0060D5A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FAEC3325047C2A0060D5A0 /* SceneDelegate.swift */; };
 		D6FAEC3825047C2B0060D5A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6FAEC3725047C2B0060D5A0 /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 		D6918C51251C552900BA2B1B /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 		D6BAA3062532AD7A004BF887 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		D6D4895A2513D9B6002C3D0E /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
+		D6F3CFF02538B921007D8645 /* AgeRangeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeRangeCell.swift; sourceTree = "<group>"; };
 		D6FAEC2E25047C2A0060D5A0 /* SwipeMatchFirestoreLBTA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwipeMatchFirestoreLBTA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6FAEC3125047C2A0060D5A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6FAEC3325047C2A0060D5A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				D658FFC725071B9100128FA2 /* CardView.swift */,
 				D65AC44F2513ECDE00E4F758 /* CustomTextField.swift */,
 				D6BAA3062532AD7A004BF887 /* SettingsCell.swift */,
+				D6F3CFF02538B921007D8645 /* AgeRangeCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				D658FFCF250868ED00128FA2 /* CardViewModel.swift in Sources */,
 				D6FAEC4625047CC60060D5A0 /* HomeController.swift in Sources */,
 				D6FAEC3225047C2A0060D5A0 /* AppDelegate.swift in Sources */,
+				D6F3CFF12538B921007D8645 /* AgeRangeCell.swift in Sources */,
 				D6FAEC4D2505DD8F0060D5A0 /* HomeBottomControlsStackView.swift in Sources */,
 				D6D4895B2513D9B6002C3D0E /* RegistrationController.swift in Sources */,
 				D658FFCB2508619300128FA2 /* User.swift in Sources */,
