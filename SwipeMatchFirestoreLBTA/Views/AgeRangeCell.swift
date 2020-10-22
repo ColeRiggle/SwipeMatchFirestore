@@ -52,8 +52,8 @@ class AgeRangeCell: UITableViewCell {
         ])
         overallStackView.axis = .vertical
         overallStackView.spacing = 16
-        addSubview(overallStackView)
-        overallStackView.anchor(top: topAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 16, left: 16, bottom: 16, right: 16))
+        contentView.addSubview(overallStackView)
+        overallStackView.anchor(top: contentView.topAnchor, leading: contentView.leadingAnchor, bottom: contentView.bottomAnchor, trailing: contentView.trailingAnchor, padding: .init(top: 16, left: 16, bottom: 16, right: 16))
     }
     
     required init?(coder aDecoder: NSCoder) {

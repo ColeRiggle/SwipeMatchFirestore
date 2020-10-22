@@ -5,22 +5,21 @@
 //  Created by Cole Riggle on 9/17/20.
 //  Copyright © 2020 Cole Riggle. All rights reserved.
 //
-
 import UIKit
 
 class CustomTextField: UITextField {
     
     let padding: CGFloat
+    let height: CGFloat
     
-    init(padding: CGFloat) {
-        self.padding = padding;
+    init(padding: CGFloat, height: CGFloat) {
+        self.padding = padding
+        self.height = height
         super.init(frame: .zero)
-        layer.cornerRadius = 25
+        layer.cornerRadius = height / 2
         backgroundColor = .white
     }
     
-    // textRect and editingRect are responsible for the inset editing field for the
-    // registration buttons
     override func textRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.insetBy(dx: padding, dy: 0)
     }
@@ -29,12 +28,11 @@ class CustomTextField: UITextField {
         return bounds.insetBy(dx: padding, dy: 0)
     }
     
-    // used to set a tenative size for all the TextFields in the application to prevent duplication
     override var intrinsicContentSize: CGSize {
-        return .init(width: 0, height: 50)
+        return .init(width: 0, height: height)
     }
     
-    required init?(coder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }

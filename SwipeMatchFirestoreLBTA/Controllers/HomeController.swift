@@ -10,38 +10,58 @@ import UIKit
 import Firebase
 import JGProgressHUD
 
-class HomeController: UIViewController {
+class HomeController: UIViewController, SettingsControllerDelegate {
     
     let topStackView = TopNavigationStackView()
     let cardsDeckView = UIView()
     let bottomControls = HomeBottomControlsStackView()
     
-    var cardViewModels = [CardViewModel]()
+    var cardViewModels = [CardViewModel]() // empty array
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
         
         topStackView.settingsButton.addTarget(self, action: #selector(handleSettings), for: .touchUpInside)
         bottomControls.refreshButton.addTarget(self, action: #selector(handleRefresh), for: .touchUpInside)
         
         setupLayout()
-        fetchUsersFromFirestore()
+        fetchCurrentUser()
+//        setupFirestoreUserCards()
+//        fetchUsersFromFirestore()
     }
     
-    // MARK:- Fileprivate
+    fileprivate let hud = JGProgressHUD(style: .dark)
+    fileprivate var user: User?
+    
+    fileprivate func fetchCurrentUser() {
+        hud.textLabel.text = "Loading"
+        hud.show(in: view)
+        cardsDeckView.subviews.forEach({$0.removeFromSuperview()})
+        Firestore.firestore().fetchCurrentUser { (user, err) in
+            if let err = err {
+                print("Failed to fetch user:", err)
+                self.hud.dismiss()
+                return
+            }
+            self.user = user
+            self.fetchUsersFromFirestore()
+        }
+    }
+    
+    @objc fileprivate func handleRefresh() {
+        fetchUsersFromFirestore()
+    }
     
     var lastFetchedUser: User?
     
     fileprivate func fetchUsersFromFirestore() {
-        let hud = JGProgressHUD(style: .dark)
-        hud.textLabel.text = "Fetching Users"
-        hud.show(in: view)
-        let query = Firestore.firestore().collection("users").order(by: "uid").start(after: [lastFetchedUser?.uid ?? ""]).limit(to: 1)
-        query.getDocuments { (snapshot, error) in
-            hud.dismiss()
-            if let error = error {
-                print("Failed to fetch users: ", error)
+        guard let minAge = user?.minSeekingAge, let maxAge = user?.maxSeekingAge else { return }
+        // i will introduce pagination here to page through 2 users at a time
+        let query = Firestore.firestore().collection("users").whereField("age", isGreaterThanOrEqualTo: minAge).whereField("age", isLessThanOrEqualTo: maxAge)
+        query.getDocuments { (snapshot, err) in
+            self.hud.dismiss()
+            if let err = err {
+                print("Failed to fetch users:", err)
                 return
             }
             
@@ -52,7 +72,6 @@ class HomeController: UIViewController {
                 self.lastFetchedUser = user
                 self.setupCardFromUser(user: user)
             })
-            //self.setupFirestoreUserCards()
         }
     }
     
@@ -64,28 +83,40 @@ class HomeController: UIViewController {
         cardView.fillSuperview()
     }
     
+    @objc func handleSettings() {
+        let settingsController = SettingsController()
+        settingsController.delegate = self
+        let navController = UINavigationController(rootViewController: settingsController)
+        present(navController, animated: true)
+    }
+    
+    func didSaveSettings() {
+        print("Notified of dismissal from SettingsController in HomeController")
+        fetchCurrentUser()
+    }
+    
+    fileprivate func setupFirestoreUserCards() {
+        cardViewModels.forEach { (cardVM) in
+            let cardView = CardView(frame: .zero)
+            cardView.cardViewModel = cardVM
+            cardsDeckView.addSubview(cardView)
+            cardView.fillSuperview()
+        }
+    }
+
+    // MARK:- Fileprivate
+    
     fileprivate func setupLayout() {
+        view.backgroundColor = .white
         let overallStackView = UIStackView(arrangedSubviews: [topStackView, cardsDeckView, bottomControls])
         overallStackView.axis = .vertical
-        
         view.addSubview(overallStackView)
-        
         overallStackView.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: view.leadingAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: view.trailingAnchor)
-        
         overallStackView.isLayoutMarginsRelativeArrangement = true
         overallStackView.layoutMargins = .init(top: 0, left: 12, bottom: 0, right: 12)
         
         overallStackView.bringSubviewToFront(cardsDeckView)
     }
-    
-    @objc fileprivate func handleSettings() {
-        let settingsController = SettingsController()
-        let navController = UINavigationController(rootViewController: settingsController)
-        navController.modalPresentationStyle = .fullScreen
-        present(navController, animated: true)
-    }
-    
-    @objc fileprivate func handleRefresh() {
-        fetchUsersFromFirestore()
-    }
+
 }
+

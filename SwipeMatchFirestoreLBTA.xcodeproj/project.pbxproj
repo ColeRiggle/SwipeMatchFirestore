@@ -8,55 +8,57 @@
 
 /* Begin PBXBuildFile section */
 		35DF064258120E8286B983D8 /* Pods_SwipeMatchFirestoreLBTA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE14D167795933E7DD15ADDD /* Pods_SwipeMatchFirestoreLBTA.framework */; };
-		D63D2188253286210093FE70 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63D2187253286210093FE70 /* SettingsController.swift */; };
-		D658FFC825071B9100128FA2 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658FFC725071B9100128FA2 /* CardView.swift */; };
 		D658FFCB2508619300128FA2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658FFCA2508619300128FA2 /* User.swift */; };
 		D658FFCF250868ED00128FA2 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658FFCE250868ED00128FA2 /* CardViewModel.swift */; };
 		D658FFD1250954AF00128FA2 /* Advertiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658FFD0250954AF00128FA2 /* Advertiser.swift */; };
-		D65AC4502513ECDE00E4F758 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65AC44F2513ECDE00E4F758 /* CustomTextField.swift */; };
-		D68D0D15251C30ED009E2374 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68D0D14251C30ED009E2374 /* RegistrationViewModel.swift */; };
 		D68D0D33251C391C009E2374 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D68D0D32251C391C009E2374 /* GoogleService-Info.plist */; };
-		D6918C52251C552900BA2B1B /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6918C51251C552900BA2B1B /* Bindable.swift */; };
-		D6BAA3072532AD7A004BF887 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BAA3062532AD7A004BF887 /* SettingsCell.swift */; };
-		D6D4895B2513D9B6002C3D0E /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D4895A2513D9B6002C3D0E /* RegistrationController.swift */; };
-		D6F3CFF12538B921007D8645 /* AgeRangeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F3CFF02538B921007D8645 /* AgeRangeCell.swift */; };
+		D6CC6C922541374500FC6242 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CC6C912541374500FC6242 /* SettingsController.swift */; };
+		D6CC6C992541375B00FC6242 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CC6C952541375900FC6242 /* HomeController.swift */; };
+		D6CC6C9A2541375B00FC6242 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CC6C962541375900FC6242 /* RegistrationController.swift */; };
+		D6CC6C9B2541375B00FC6242 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CC6C972541375A00FC6242 /* Bindable.swift */; };
+		D6CC6C9C2541375B00FC6242 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CC6C982541375B00FC6242 /* RegistrationViewModel.swift */; };
+		D6CC6CA52541378300FC6242 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CC6C9F2541377E00FC6242 /* SettingsCell.swift */; };
+		D6CC6CA62541378300FC6242 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CC6CA02541377F00FC6242 /* CustomTextField.swift */; };
+		D6CC6CA72541378300FC6242 /* HomeBottomControlsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CC6CA12541378000FC6242 /* HomeBottomControlsStackView.swift */; };
+		D6CC6CA82541378300FC6242 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CC6CA22541378100FC6242 /* CardView.swift */; };
+		D6CC6CA92541378300FC6242 /* TopNavigationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CC6CA32541378200FC6242 /* TopNavigationStackView.swift */; };
+		D6CC6CAA2541378300FC6242 /* AgeRangeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CC6CA42541378300FC6242 /* AgeRangeCell.swift */; };
+		D6CC6CAD254137A300FC6242 /* Firebase+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CC6CAC254137A300FC6242 /* Firebase+Utils.swift */; };
 		D6FAEC3225047C2A0060D5A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FAEC3125047C2A0060D5A0 /* AppDelegate.swift */; };
 		D6FAEC3425047C2A0060D5A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FAEC3325047C2A0060D5A0 /* SceneDelegate.swift */; };
 		D6FAEC3825047C2B0060D5A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6FAEC3725047C2B0060D5A0 /* Assets.xcassets */; };
 		D6FAEC3E25047C2B0060D5A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6FAEC3C25047C2B0060D5A0 /* LaunchScreen.storyboard */; };
-		D6FAEC4625047CC60060D5A0 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FAEC4525047CC60060D5A0 /* HomeController.swift */; };
 		D6FAEC4925047E460060D5A0 /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FAEC4825047E460060D5A0 /* Extensions+UIView.swift */; };
-		D6FAEC4D2505DD8F0060D5A0 /* HomeBottomControlsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FAEC4C2505DD8F0060D5A0 /* HomeBottomControlsStackView.swift */; };
-		D6FAEC4F2505E1AE0060D5A0 /* TopNavigationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FAEC4E2505E1AE0060D5A0 /* TopNavigationStackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		35C3E373C5D000C24A70247C /* Pods-SwipeMatchFirestoreLBTA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeMatchFirestoreLBTA.release.xcconfig"; path = "Target Support Files/Pods-SwipeMatchFirestoreLBTA/Pods-SwipeMatchFirestoreLBTA.release.xcconfig"; sourceTree = "<group>"; };
 		6F3442769469697BFC25A8A1 /* Pods-SwipeMatchFirestoreLBTA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeMatchFirestoreLBTA.debug.xcconfig"; path = "Target Support Files/Pods-SwipeMatchFirestoreLBTA/Pods-SwipeMatchFirestoreLBTA.debug.xcconfig"; sourceTree = "<group>"; };
 		BE14D167795933E7DD15ADDD /* Pods_SwipeMatchFirestoreLBTA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwipeMatchFirestoreLBTA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D63D2187253286210093FE70 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
-		D658FFC725071B9100128FA2 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		D658FFCA2508619300128FA2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D658FFCE250868ED00128FA2 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 		D658FFD0250954AF00128FA2 /* Advertiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advertiser.swift; sourceTree = "<group>"; };
-		D65AC44F2513ECDE00E4F758 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		D65AC4512513F2AB00E4F758 /* SwipeMatchFirestoreLBTA.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwipeMatchFirestoreLBTA.entitlements; sourceTree = "<group>"; };
-		D68D0D14251C30ED009E2374 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		D68D0D32251C391C009E2374 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		D6918C51251C552900BA2B1B /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
-		D6BAA3062532AD7A004BF887 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
-		D6D4895A2513D9B6002C3D0E /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
-		D6F3CFF02538B921007D8645 /* AgeRangeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeRangeCell.swift; sourceTree = "<group>"; };
+		D6CC6C912541374500FC6242 /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		D6CC6C952541375900FC6242 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		D6CC6C962541375900FC6242 /* RegistrationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
+		D6CC6C972541375A00FC6242 /* Bindable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
+		D6CC6C982541375B00FC6242 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		D6CC6C9F2541377E00FC6242 /* SettingsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
+		D6CC6CA02541377F00FC6242 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		D6CC6CA12541378000FC6242 /* HomeBottomControlsStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeBottomControlsStackView.swift; sourceTree = "<group>"; };
+		D6CC6CA22541378100FC6242 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		D6CC6CA32541378200FC6242 /* TopNavigationStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopNavigationStackView.swift; sourceTree = "<group>"; };
+		D6CC6CA42541378300FC6242 /* AgeRangeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgeRangeCell.swift; sourceTree = "<group>"; };
+		D6CC6CAC254137A300FC6242 /* Firebase+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Firebase+Utils.swift"; sourceTree = "<group>"; };
 		D6FAEC2E25047C2A0060D5A0 /* SwipeMatchFirestoreLBTA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwipeMatchFirestoreLBTA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6FAEC3125047C2A0060D5A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6FAEC3325047C2A0060D5A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D6FAEC3725047C2B0060D5A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6FAEC3D25047C2B0060D5A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6FAEC3F25047C2B0060D5A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D6FAEC4525047CC60060D5A0 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		D6FAEC4825047E460060D5A0 /* Extensions+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
-		D6FAEC4C2505DD8F0060D5A0 /* HomeBottomControlsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBottomControlsStackView.swift; sourceTree = "<group>"; };
-		D6FAEC4E2505E1AE0060D5A0 /* TopNavigationStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNavigationStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,11 +93,11 @@
 		D658FFCC2508685100128FA2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D6FAEC4525047CC60060D5A0 /* HomeController.swift */,
-				D6D4895A2513D9B6002C3D0E /* RegistrationController.swift */,
-				D68D0D14251C30ED009E2374 /* RegistrationViewModel.swift */,
-				D6918C51251C552900BA2B1B /* Bindable.swift */,
-				D63D2187253286210093FE70 /* SettingsController.swift */,
+				D6CC6C912541374500FC6242 /* SettingsController.swift */,
+				D6CC6C972541375A00FC6242 /* Bindable.swift */,
+				D6CC6C952541375900FC6242 /* HomeController.swift */,
+				D6CC6C962541375900FC6242 /* RegistrationController.swift */,
+				D6CC6C982541375B00FC6242 /* RegistrationViewModel.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -149,6 +151,7 @@
 		D6FAEC4725047E260060D5A0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				D6CC6CAC254137A300FC6242 /* Firebase+Utils.swift */,
 				D6FAEC4825047E460060D5A0 /* Extensions+UIView.swift */,
 			);
 			path = Extensions;
@@ -164,12 +167,12 @@
 		D6FAEC4B2505DD650060D5A0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D6FAEC4C2505DD8F0060D5A0 /* HomeBottomControlsStackView.swift */,
-				D6FAEC4E2505E1AE0060D5A0 /* TopNavigationStackView.swift */,
-				D658FFC725071B9100128FA2 /* CardView.swift */,
-				D65AC44F2513ECDE00E4F758 /* CustomTextField.swift */,
-				D6BAA3062532AD7A004BF887 /* SettingsCell.swift */,
-				D6F3CFF02538B921007D8645 /* AgeRangeCell.swift */,
+				D6CC6CA42541378300FC6242 /* AgeRangeCell.swift */,
+				D6CC6CA22541378100FC6242 /* CardView.swift */,
+				D6CC6CA02541377F00FC6242 /* CustomTextField.swift */,
+				D6CC6CA12541378000FC6242 /* HomeBottomControlsStackView.swift */,
+				D6CC6C9F2541377E00FC6242 /* SettingsCell.swift */,
+				D6CC6CA32541378200FC6242 /* TopNavigationStackView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -301,22 +304,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6CC6CAD254137A300FC6242 /* Firebase+Utils.swift in Sources */,
+				D6CC6CA62541378300FC6242 /* CustomTextField.swift in Sources */,
+				D6CC6CA72541378300FC6242 /* HomeBottomControlsStackView.swift in Sources */,
 				D658FFD1250954AF00128FA2 /* Advertiser.swift in Sources */,
-				D658FFC825071B9100128FA2 /* CardView.swift in Sources */,
+				D6CC6C9C2541375B00FC6242 /* RegistrationViewModel.swift in Sources */,
+				D6CC6CA82541378300FC6242 /* CardView.swift in Sources */,
+				D6CC6CAA2541378300FC6242 /* AgeRangeCell.swift in Sources */,
+				D6CC6CA52541378300FC6242 /* SettingsCell.swift in Sources */,
+				D6CC6C992541375B00FC6242 /* HomeController.swift in Sources */,
 				D658FFCF250868ED00128FA2 /* CardViewModel.swift in Sources */,
-				D6FAEC4625047CC60060D5A0 /* HomeController.swift in Sources */,
+				D6CC6C922541374500FC6242 /* SettingsController.swift in Sources */,
 				D6FAEC3225047C2A0060D5A0 /* AppDelegate.swift in Sources */,
-				D6F3CFF12538B921007D8645 /* AgeRangeCell.swift in Sources */,
-				D6FAEC4D2505DD8F0060D5A0 /* HomeBottomControlsStackView.swift in Sources */,
-				D6D4895B2513D9B6002C3D0E /* RegistrationController.swift in Sources */,
 				D658FFCB2508619300128FA2 /* User.swift in Sources */,
-				D6918C52251C552900BA2B1B /* Bindable.swift in Sources */,
-				D65AC4502513ECDE00E4F758 /* CustomTextField.swift in Sources */,
-				D68D0D15251C30ED009E2374 /* RegistrationViewModel.swift in Sources */,
-				D63D2188253286210093FE70 /* SettingsController.swift in Sources */,
-				D6FAEC4F2505E1AE0060D5A0 /* TopNavigationStackView.swift in Sources */,
+				D6CC6CA92541378300FC6242 /* TopNavigationStackView.swift in Sources */,
+				D6CC6C9B2541375B00FC6242 /* Bindable.swift in Sources */,
 				D6FAEC4925047E460060D5A0 /* Extensions+UIView.swift in Sources */,
-				D6BAA3072532AD7A004BF887 /* SettingsCell.swift in Sources */,
+				D6CC6C9A2541375B00FC6242 /* RegistrationController.swift in Sources */,
 				D6FAEC3425047C2A0060D5A0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
