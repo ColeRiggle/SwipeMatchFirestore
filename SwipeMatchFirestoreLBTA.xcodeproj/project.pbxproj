@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		35DF064258120E8286B983D8 /* Pods_SwipeMatchFirestoreLBTA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE14D167795933E7DD15ADDD /* Pods_SwipeMatchFirestoreLBTA.framework */; };
+		D6578418254242C2005B0780 /* UserDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6578417254242C2005B0780 /* UserDetailsController.swift */; };
 		D658FFCB2508619300128FA2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658FFCA2508619300128FA2 /* User.swift */; };
 		D658FFCF250868ED00128FA2 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658FFCE250868ED00128FA2 /* CardViewModel.swift */; };
 		D658FFD1250954AF00128FA2 /* Advertiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658FFD0250954AF00128FA2 /* Advertiser.swift */; };
@@ -37,6 +38,7 @@
 		35C3E373C5D000C24A70247C /* Pods-SwipeMatchFirestoreLBTA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeMatchFirestoreLBTA.release.xcconfig"; path = "Target Support Files/Pods-SwipeMatchFirestoreLBTA/Pods-SwipeMatchFirestoreLBTA.release.xcconfig"; sourceTree = "<group>"; };
 		6F3442769469697BFC25A8A1 /* Pods-SwipeMatchFirestoreLBTA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeMatchFirestoreLBTA.debug.xcconfig"; path = "Target Support Files/Pods-SwipeMatchFirestoreLBTA/Pods-SwipeMatchFirestoreLBTA.debug.xcconfig"; sourceTree = "<group>"; };
 		BE14D167795933E7DD15ADDD /* Pods_SwipeMatchFirestoreLBTA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwipeMatchFirestoreLBTA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6578417254242C2005B0780 /* UserDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsController.swift; sourceTree = "<group>"; };
 		D658FFCA2508619300128FA2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D658FFCE250868ED00128FA2 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 		D658FFD0250954AF00128FA2 /* Advertiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advertiser.swift; sourceTree = "<group>"; };
@@ -85,6 +87,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D6578416254242A4005B0780 /* User Details */ = {
+			isa = PBXGroup;
+			children = (
+				D6578417254242C2005B0780 /* UserDetailsController.swift */,
+			);
+			path = "User Details";
+			sourceTree = "<group>";
+		};
 		D658FFC92508618800128FA2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +107,7 @@
 		D658FFCC2508685100128FA2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D6578416254242A4005B0780 /* User Details */,
 				D6CC6CAF25413E2A00FC6242 /* Login */,
 				D6CC6C912541374500FC6242 /* SettingsController.swift */,
 				D6CC6C972541375A00FC6242 /* Bindable.swift */,
@@ -325,6 +336,7 @@
 				D6CC6C9C2541375B00FC6242 /* RegistrationViewModel.swift in Sources */,
 				D6CC6CA82541378300FC6242 /* CardView.swift in Sources */,
 				D6CC6CAA2541378300FC6242 /* AgeRangeCell.swift in Sources */,
+				D6578418254242C2005B0780 /* UserDetailsController.swift in Sources */,
 				D6CC6CA52541378300FC6242 /* SettingsCell.swift in Sources */,
 				D6CC6C992541375B00FC6242 /* HomeController.swift in Sources */,
 				D6CC6CB325413E4D00FC6242 /* LoginController.swift in Sources */,
