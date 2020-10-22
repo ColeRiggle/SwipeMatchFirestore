@@ -194,21 +194,10 @@ class SettingsController: UITableViewController, UIImagePickerControllerDelegate
     }
     
     @objc fileprivate func handleMinAgeChange(slider: UISlider) {
-//        print(slider.value)
-        // I want to update the minLabel in my AgeRangeCell somehow...
-//        let indexPath = IndexPath(row: 0, section: 5)
-//        let ageRangeCell = tableView.cellForRow(at: indexPath) as! AgeRangeCell
-//        ageRangeCell.minLabel.text = "Min \(Int(slider.value))"
-//
-//        self.user?.minSeekingAge = Int(slider.value)
         evaluateMinMax()
     }
     
     @objc fileprivate func handleMaxAgeChange(slider: UISlider) {
-//        let indexPath = IndexPath(row: 0, section: 5)
-//        let ageRangeCell = tableView.cellForRow(at: indexPath) as! AgeRangeCell
-//        ageRangeCell.maxLabel.text = "Max \(Int(slider.value))"
-//        self.user?.maxSeekingAge = Int(slider.value)
         evaluateMinMax()
     }
     
@@ -282,7 +271,7 @@ class SettingsController: UITableViewController, UIImagePickerControllerDelegate
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(handleCancel))
         navigationItem.rightBarButtonItems = [
             UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(handleSave)),
-            UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleCancel))
+            UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
         ]
     }
     
@@ -315,7 +304,6 @@ class SettingsController: UITableViewController, UIImagePickerControllerDelegate
             self.dismiss(animated: true, completion: {
                 print("Dismissal complete")
                 self.delegate?.didSaveSettings()
-//                homeController.fetchCurrentUser() // I want to refetch my cards inside of homeController somehow
             })
         }
     }
@@ -324,4 +312,9 @@ class SettingsController: UITableViewController, UIImagePickerControllerDelegate
         dismiss(animated: true)
     }
 
+    
+    @objc fileprivate func handleLogout() {
+        try? Auth.auth().signOut()
+        dismiss(animated: true)
+    }
 }

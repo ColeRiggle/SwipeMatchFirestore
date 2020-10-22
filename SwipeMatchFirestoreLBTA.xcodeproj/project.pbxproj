@@ -24,6 +24,8 @@
 		D6CC6CA92541378300FC6242 /* TopNavigationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CC6CA32541378200FC6242 /* TopNavigationStackView.swift */; };
 		D6CC6CAA2541378300FC6242 /* AgeRangeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CC6CA42541378300FC6242 /* AgeRangeCell.swift */; };
 		D6CC6CAD254137A300FC6242 /* Firebase+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CC6CAC254137A300FC6242 /* Firebase+Utils.swift */; };
+		D6CC6CB225413E4D00FC6242 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CC6CB025413E4D00FC6242 /* LoginViewModel.swift */; };
+		D6CC6CB325413E4D00FC6242 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CC6CB125413E4D00FC6242 /* LoginController.swift */; };
 		D6FAEC3225047C2A0060D5A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FAEC3125047C2A0060D5A0 /* AppDelegate.swift */; };
 		D6FAEC3425047C2A0060D5A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FAEC3325047C2A0060D5A0 /* SceneDelegate.swift */; };
 		D6FAEC3825047C2B0060D5A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6FAEC3725047C2B0060D5A0 /* Assets.xcassets */; };
@@ -52,6 +54,8 @@
 		D6CC6CA32541378200FC6242 /* TopNavigationStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopNavigationStackView.swift; sourceTree = "<group>"; };
 		D6CC6CA42541378300FC6242 /* AgeRangeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgeRangeCell.swift; sourceTree = "<group>"; };
 		D6CC6CAC254137A300FC6242 /* Firebase+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Firebase+Utils.swift"; sourceTree = "<group>"; };
+		D6CC6CB025413E4D00FC6242 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		D6CC6CB125413E4D00FC6242 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		D6FAEC2E25047C2A0060D5A0 /* SwipeMatchFirestoreLBTA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwipeMatchFirestoreLBTA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6FAEC3125047C2A0060D5A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6FAEC3325047C2A0060D5A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +97,7 @@
 		D658FFCC2508685100128FA2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D6CC6CAF25413E2A00FC6242 /* Login */,
 				D6CC6C912541374500FC6242 /* SettingsController.swift */,
 				D6CC6C972541375A00FC6242 /* Bindable.swift */,
 				D6CC6C952541375900FC6242 /* HomeController.swift */,
@@ -108,6 +113,15 @@
 				D658FFCE250868ED00128FA2 /* CardViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D6CC6CAF25413E2A00FC6242 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D6CC6CB125413E4D00FC6242 /* LoginController.swift */,
+				D6CC6CB025413E4D00FC6242 /* LoginViewModel.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		D6FAEC2525047C2A0060D5A0 = {
@@ -313,6 +327,7 @@
 				D6CC6CAA2541378300FC6242 /* AgeRangeCell.swift in Sources */,
 				D6CC6CA52541378300FC6242 /* SettingsCell.swift in Sources */,
 				D6CC6C992541375B00FC6242 /* HomeController.swift in Sources */,
+				D6CC6CB325413E4D00FC6242 /* LoginController.swift in Sources */,
 				D658FFCF250868ED00128FA2 /* CardViewModel.swift in Sources */,
 				D6CC6C922541374500FC6242 /* SettingsController.swift in Sources */,
 				D6FAEC3225047C2A0060D5A0 /* AppDelegate.swift in Sources */,
@@ -321,6 +336,7 @@
 				D6CC6C9B2541375B00FC6242 /* Bindable.swift in Sources */,
 				D6FAEC4925047E460060D5A0 /* Extensions+UIView.swift in Sources */,
 				D6CC6C9A2541375B00FC6242 /* RegistrationController.swift in Sources */,
+				D6CC6CB225413E4D00FC6242 /* LoginViewModel.swift in Sources */,
 				D6FAEC3425047C2A0060D5A0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
