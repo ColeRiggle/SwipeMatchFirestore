@@ -45,9 +45,13 @@ class HomeController: UIViewController, SettingsControllerDelegate, LoginControl
     }
     
     
-    func didTapMoreInfo() {
+    func didTapMoreInfo(cardViewModel: CardViewModel) {
         let userDetailsController = UserDetailsController()
-        present(userDetailsController, animated: true, completion: nil)
+        userDetailsController.cardViewModel = cardViewModel
+        let navController = UINavigationController(rootViewController: userDetailsController)
+        navController.modalPresentationStyle = .fullScreen
+        navController.navigationBar.isHidden = true
+        present(navController, animated: true, completion: nil)
     }
     
     fileprivate let hud = JGProgressHUD(style: .dark)
@@ -58,9 +62,9 @@ class HomeController: UIViewController, SettingsControllerDelegate, LoginControl
         hud.show(in: view)
         cardsDeckView.subviews.forEach({$0.removeFromSuperview()})
         Firestore.firestore().fetchCurrentUser { (user, err) in
+            self.hud.dismiss()
             if let err = err {
                 print("Failed to fetch user:", err)
-                self.hud.dismiss()
                 return
             }
             self.user = user
