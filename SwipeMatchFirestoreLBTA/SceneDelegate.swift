@@ -23,7 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = HomeController()
+            window.rootViewController = SwipingPhototsController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
             self.window = window
             window.makeKeyAndVisible()
         }

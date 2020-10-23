@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		35DF064258120E8286B983D8 /* Pods_SwipeMatchFirestoreLBTA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE14D167795933E7DD15ADDD /* Pods_SwipeMatchFirestoreLBTA.framework */; };
 		D6578418254242C2005B0780 /* UserDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6578417254242C2005B0780 /* UserDetailsController.swift */; };
+		D657841C2543A04A005B0780 /* SwipingPhototsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D657841B2543A04A005B0780 /* SwipingPhototsController.swift */; };
 		D658FFCB2508619300128FA2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658FFCA2508619300128FA2 /* User.swift */; };
 		D658FFCF250868ED00128FA2 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658FFCE250868ED00128FA2 /* CardViewModel.swift */; };
 		D658FFD1250954AF00128FA2 /* Advertiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658FFD0250954AF00128FA2 /* Advertiser.swift */; };
@@ -39,6 +40,7 @@
 		6F3442769469697BFC25A8A1 /* Pods-SwipeMatchFirestoreLBTA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeMatchFirestoreLBTA.debug.xcconfig"; path = "Target Support Files/Pods-SwipeMatchFirestoreLBTA/Pods-SwipeMatchFirestoreLBTA.debug.xcconfig"; sourceTree = "<group>"; };
 		BE14D167795933E7DD15ADDD /* Pods_SwipeMatchFirestoreLBTA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwipeMatchFirestoreLBTA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6578417254242C2005B0780 /* UserDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsController.swift; sourceTree = "<group>"; };
+		D657841B2543A04A005B0780 /* SwipingPhototsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingPhototsController.swift; sourceTree = "<group>"; };
 		D658FFCA2508619300128FA2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D658FFCE250868ED00128FA2 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 		D658FFD0250954AF00128FA2 /* Advertiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advertiser.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				D6578417254242C2005B0780 /* UserDetailsController.swift */,
+				D657841B2543A04A005B0780 /* SwipingPhototsController.swift */,
 			);
 			path = "User Details";
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 				D6CC6C9A2541375B00FC6242 /* RegistrationController.swift in Sources */,
 				D6CC6CB225413E4D00FC6242 /* LoginViewModel.swift in Sources */,
 				D6FAEC3425047C2A0060D5A0 /* SceneDelegate.swift in Sources */,
+				D657841C2543A04A005B0780 /* SwipingPhototsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
