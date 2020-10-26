@@ -23,10 +23,12 @@ class HomeController: UIViewController, SettingsControllerDelegate, LoginControl
         
         topStackView.settingsButton.addTarget(self, action: #selector(handleSettings), for: .touchUpInside)
         bottomControls.refreshButton.addTarget(self, action: #selector(handleRefresh), for: .touchUpInside)
+        bottomControls.likeButton.addTarget(self, action: #selector(handleLike), for: .touchUpInside)
         
         setupLayout()
         fetchCurrentUser()
     }
+    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -79,8 +81,9 @@ class HomeController: UIViewController, SettingsControllerDelegate, LoginControl
     var lastFetchedUser: User?
     
     fileprivate func fetchUsersFromFirestore() {
-        guard let minAge = user?.minSeekingAge, let maxAge = user?.maxSeekingAge else { return }
-        // i will introduce pagination here to page through 2 users at a time
+        let minAge = user?.minSeekingAge ?? SettingsController.defaultMinSeekingAge
+        let maxAge = user?.maxSeekingAge ?? SettingsController.defaultMaxSeekingAge
+        
         let query = Firestore.firestore().collection("users").whereField("age", isGreaterThanOrEqualTo: minAge).whereField("age", isLessThanOrEqualTo: maxAge)
         query.getDocuments { (snapshot, err) in
             self.hud.dismiss()
@@ -89,25 +92,54 @@ class HomeController: UIViewController, SettingsControllerDelegate, LoginControl
                 return
             }
             
+            var previousCardView: CardView?
+            
             snapshot?.documents.forEach({ (documentSnapshot) in
                 let userDictionary = documentSnapshot.data()
                 let user = User(dictionary: userDictionary)
                 if (user.uid != Auth.auth().currentUser?.uid) {
                     self.cardViewModels.append(user.toCardViewModel())
                     self.lastFetchedUser = user
-                    self.setupCardFromUser(user: user)
+                    let cardView = self.setupCardFromUser(user: user)
+                    
+                    previousCardView?.nextCardView = cardView
+                    previousCardView = cardView
+                    
+                    if (self.topCardView == nil) {
+                        self.topCardView = cardView
+                    }
                 }
             })
         }
     }
     
-    fileprivate func setupCardFromUser(user: User) {
+    var topCardView: CardView?
+    
+    func didRemoveCard(cardView: CardView) {
+        self.topCardView?.removeFromSuperview()
+        self.topCardView = self.topCardView?.nextCardView
+    }
+    
+    @objc fileprivate func handleLike() {
+        UIView.animate(withDuration: 1.0, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.1, options: .curveEaseOut) {
+            self.topCardView?.center = CGPoint(x: 600, y: 0)
+            let angle = 15 * CGFloat.pi / 180
+            self.topCardView?.transform = CGAffineTransform(rotationAngle: angle)
+            
+        } completion: { (_) in
+            self.topCardView?.transform = .identity
+        }
+
+    }
+    
+    fileprivate func setupCardFromUser(user: User) -> CardView {
         let cardView = CardView(frame: .zero)
         cardView.delegate = self
         cardView.cardViewModel = user.toCardViewModel()
         cardsDeckView.addSubview(cardView)
         cardsDeckView.sendSubviewToBack(cardView)
         cardView.fillSuperview()
+        return cardView
     }
     
     @objc func handleSettings() {
