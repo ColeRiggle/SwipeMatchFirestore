@@ -10,6 +10,9 @@
 		35DF064258120E8286B983D8 /* Pods_SwipeMatchFirestoreLBTA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE14D167795933E7DD15ADDD /* Pods_SwipeMatchFirestoreLBTA.framework */; };
 		D6578418254242C2005B0780 /* UserDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6578417254242C2005B0780 /* UserDetailsController.swift */; };
 		D657841C2543A04A005B0780 /* SwipingPhototsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D657841B2543A04A005B0780 /* SwipingPhototsController.swift */; };
+		D657841F2547792C005B0780 /* MatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D657841E2547792C005B0780 /* MatchView.swift */; };
+		D65784262547850E005B0780 /* SendMessageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65784252547850E005B0780 /* SendMessageButton.swift */; };
+		D657842925479212005B0780 /* KeepSwipingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D657842825479212005B0780 /* KeepSwipingButton.swift */; };
 		D658FFCB2508619300128FA2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658FFCA2508619300128FA2 /* User.swift */; };
 		D658FFCF250868ED00128FA2 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658FFCE250868ED00128FA2 /* CardViewModel.swift */; };
 		D658FFD1250954AF00128FA2 /* Advertiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658FFD0250954AF00128FA2 /* Advertiser.swift */; };
@@ -41,6 +44,9 @@
 		BE14D167795933E7DD15ADDD /* Pods_SwipeMatchFirestoreLBTA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwipeMatchFirestoreLBTA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6578417254242C2005B0780 /* UserDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsController.swift; sourceTree = "<group>"; };
 		D657841B2543A04A005B0780 /* SwipingPhototsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingPhototsController.swift; sourceTree = "<group>"; };
+		D657841E2547792C005B0780 /* MatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchView.swift; sourceTree = "<group>"; };
+		D65784252547850E005B0780 /* SendMessageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMessageButton.swift; sourceTree = "<group>"; };
+		D657842825479212005B0780 /* KeepSwipingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeepSwipingButton.swift; sourceTree = "<group>"; };
 		D658FFCA2508619300128FA2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D658FFCE250868ED00128FA2 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 		D658FFD0250954AF00128FA2 /* Advertiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advertiser.swift; sourceTree = "<group>"; };
@@ -201,6 +207,9 @@
 				D6CC6CA12541378000FC6242 /* HomeBottomControlsStackView.swift */,
 				D6CC6C9F2541377E00FC6242 /* SettingsCell.swift */,
 				D6CC6CA32541378200FC6242 /* TopNavigationStackView.swift */,
+				D657841E2547792C005B0780 /* MatchView.swift */,
+				D65784252547850E005B0780 /* SendMessageButton.swift */,
+				D657842825479212005B0780 /* KeepSwipingButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -340,6 +349,8 @@
 				D6CC6CA82541378300FC6242 /* CardView.swift in Sources */,
 				D6CC6CAA2541378300FC6242 /* AgeRangeCell.swift in Sources */,
 				D6578418254242C2005B0780 /* UserDetailsController.swift in Sources */,
+				D657842925479212005B0780 /* KeepSwipingButton.swift in Sources */,
+				D657841F2547792C005B0780 /* MatchView.swift in Sources */,
 				D6CC6CA52541378300FC6242 /* SettingsCell.swift in Sources */,
 				D6CC6C992541375B00FC6242 /* HomeController.swift in Sources */,
 				D6CC6CB325413E4D00FC6242 /* LoginController.swift in Sources */,
@@ -352,6 +363,7 @@
 				D6FAEC4925047E460060D5A0 /* Extensions+UIView.swift in Sources */,
 				D6CC6C9A2541375B00FC6242 /* RegistrationController.swift in Sources */,
 				D6CC6CB225413E4D00FC6242 /* LoginViewModel.swift in Sources */,
+				D65784262547850E005B0780 /* SendMessageButton.swift in Sources */,
 				D6FAEC3425047C2A0060D5A0 /* SceneDelegate.swift in Sources */,
 				D657841C2543A04A005B0780 /* SwipingPhototsController.swift in Sources */,
 			);
