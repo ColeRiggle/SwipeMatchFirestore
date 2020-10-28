@@ -16,7 +16,7 @@ class HomeController: UIViewController, SettingsControllerDelegate, LoginControl
     let cardsDeckView = UIView()
     let bottomControls = HomeBottomControlsStackView()
     
-    var cardViewModels = [CardViewModel]() // empty array
+    var cardViewModels = [CardViewModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,8 +34,8 @@ class HomeController: UIViewController, SettingsControllerDelegate, LoginControl
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if Auth.auth().currentUser == nil {
-            let loginController = LoginController()
-            loginController.delegate = self
+            let loginController = RegistrationController()
+            //loginController.delegate = self
             let navController = UINavigationController(rootViewController: loginController)
             navController.modalPresentationStyle = .fullScreen
             navController.isNavigationBarHidden = true
@@ -46,7 +46,6 @@ class HomeController: UIViewController, SettingsControllerDelegate, LoginControl
     func didFinishLoggingIn() {
         fetchCurrentUser()
     }
-    
     
     func didTapMoreInfo(cardViewModel: CardViewModel) {
         let userDetailsController = UserDetailsController()
@@ -234,6 +233,8 @@ class HomeController: UIViewController, SettingsControllerDelegate, LoginControl
     
     fileprivate func presentMatchView(cardUID: String) {
         let matchView = MatchView()
+        matchView.cardUID = cardUID
+        matchView.currentUser = self.user
         view.addSubview(matchView)
         matchView.fillSuperview()
     }
